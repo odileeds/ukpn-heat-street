@@ -767,7 +767,7 @@
 								var c = {'r':0,'g':0,'b':0,'alpha':0};
 								var data = _scenario[_obj.options.view];
 								var key = _obj.layers[layer.id].key;
-								if(feature.properties[key] && data.values[feature.properties[key]]){
+								if(feature.properties[key] && data.values[feature.properties[key]] && !isNaN(layer.range.min) && !isNaN(layer.range.max)){
 									c = layer.colour.getColourFromScale( layer.colourscale, data.values[feature.properties[key]][_obj.options.key],layer.range.min,layer.range.max,true);
 								}else{
 									//console.warn('Unable to find '+key,feature.properties)
