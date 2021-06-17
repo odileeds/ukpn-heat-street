@@ -1,0 +1,106 @@
+Consumer archetype ID,Building archetype ID,Sector,Fuel Type,Heating System,Floor Area,Stock,Owner occupier,Private Rented
+1,1,"Community, arts & leisure",Electricity, Electric Resistive ," 469,413.54 ", 232 ,84%,16%
+2,2,"Community, arts & leisure",Electricity, Electric Resistive ," 2,943,441.01 "," 6,845 ",84%,16%
+3,3,"Community, arts & leisure",Electricity, Electric Resistive ," 249,931.07 "," 1,549 ",84%,16%
+4,4,"Community, arts & leisure",Gas, Gas boiler ," 9,841,597.86 "," 2,640 ",84%,16%
+5,5,"Community, arts & leisure",Gas, Gas boiler ," 6,932,865.47 "," 14,055 ",84%,16%
+6,6,"Community, arts & leisure",Gas, Gas boiler ," 442,732.48 "," 3,071 ",84%,16%
+7,7,"Community, arts & leisure",Other, Oil Boiler ," 3,103,192.41 ", 825 ,84%,16%
+8,8,"Community, arts & leisure",Other, Oil Boiler ," 1,208,144.64 "," 2,188 ",84%,16%
+9,9,"Community, arts & leisure",Other, Oil Boiler ," 27,779.34 ", 163 ,84%,16%
+10,10,Education,Electricity, Electric Resistive ," 554,634.80 ", 75 ,85%,16%
+11,11,Education,Electricity, Electric Resistive ," 1,950,445.97 "," 1,973 ",85%,16%
+12,12,Education,Electricity, Electric Resistive ," 107,194.77 ", 703 ,85%,16%
+13,13,Education,Gas, Gas boiler ," 16,241,559.50 "," 1,359 ",85%,16%
+14,14,Education,Gas, Gas boiler ," 13,040,346.99 "," 9,192 ",85%,16%
+15,15,Education,Gas, Gas boiler ," 195,181.55 "," 1,349 ",85%,16%
+16,16,Education,Other, Oil Boiler ," 1,785,060.34 ", 224 ,85%,16%
+17,17,Education,Other, Oil Boiler ," 1,792,074.53 "," 1,248 ",85%,16%
+18,18,Education,Other, Oil Boiler ," 10,219.45 ", 65 ,85%,16%
+19,19,Emergency Services,Electricity, Electric Resistive ," 119,402.30 ", 20 ,93%,16%
+20,20,Emergency Services,Electricity, Electric Resistive ," 34,468.66 ", 49 ,93%,16%
+21,21,Emergency Services,Electricity, Electric Resistive , 431.57 , 50 ,93%,16%
+22,22,Emergency Services,Gas, Gas boiler ," 2,139,474.88 ", 358 ,93%,16%
+23,23,Emergency Services,Gas, Gas boiler ," 1,096,946.02 "," 1,166 ",93%,16%
+24,24,Emergency Services,Gas, Gas boiler ," 4,035.39 ", 293 ,93%,16%
+25,25,Emergency Services,Other, Oil Boiler ," 24,284.00 ", 8 ,93%,16%
+26,26,Emergency Services,Other, Oil Boiler ," 22,113.96 ", 32 ,93%,16%
+27,27,Emergency Services,Other, Oil Boiler , 85.53 , 3 ,93%,16%
+28,28,Health,Electricity, Electric Resistive ," 354,866.40 ", 58 ,74%,16%
+29,29,Health,Electricity, Electric Resistive ," 810,552.88 "," 2,309 ",74%,16%
+30,30,Health,Electricity, Electric Resistive ," 14,541.25 ", 272 ,74%,16%
+31,31,Health,Gas, Gas boiler ," 12,243,297.64 ", 886 ,74%,16%
+32,32,Health,Gas, Gas boiler ," 5,900,854.26 "," 12,220 ",74%,16%
+33,33,Health,Gas, Gas boiler ," 61,376.13 "," 1,280 ",74%,16%
+34,34,Health,Other, Oil Boiler ," 23,223.09 ", 4 ,74%,16%
+35,35,Health,Other, Oil Boiler ," 145,393.44 ", 461 ,74%,16%
+36,36,Health,Other, Oil Boiler ," 4,169.71 ", 77 ,74%,16%
+37,37,Hospitality,Electricity, Electric Resistive ," 6,875,836.08 "," 6,936 ",48%,16%
+38,38,Hospitality,Electricity, Electric Resistive ," 9,757,543.25 "," 34,032 ",48%,16%
+39,39,Hospitality,Electricity, Electric Resistive ," 42,966.90 "," 1,763 ",48%,16%
+40,40,Hospitality,Gas, Gas boiler ," 13,904,083.36 "," 7,128 ",48%,16%
+41,41,Hospitality,Gas, Gas boiler ," 5,939,818.54 "," 22,726 ",48%,16%
+42,42,Hospitality,Gas, Gas boiler ," 253,568.42 "," 10,379 ",48%,16%
+43,43,Hospitality,Other, Oil Boiler ," 4,626,857.85 "," 2,993 ",48%,16%
+44,44,Hospitality,Other, Oil Boiler ," 458,018.26 "," 1,574 ",48%,16%
+45,45,Hospitality,Other, Oil Boiler ," 1,774.88 ", 66 ,48%,16%
+46,46,Industrial,Electricity, Electric Resistive ," 5,018,179.27 "," 2,328 ",59%,16%
+47,47,Industrial,Electricity, Electric Resistive ," 8,192,870.68 "," 27,982 ",59%,16%
+48,48,Industrial,Electricity, Electric Resistive ," 61,782.97 "," 1,333 ",59%,16%
+49,49,Industrial,Gas, Gas boiler ," 7,323,079.99 "," 2,742 ",59%,16%
+50,50,Industrial,Gas, Gas boiler ," 5,948,765.69 "," 24,389 ",59%,16%
+51,51,Industrial,Gas, Gas boiler ," 243,329.29 "," 5,710 ",59%,16%
+52,52,Industrial,Other, Oil Boiler ," 387,008.41 ", 193 ,59%,16%
+53,53,Industrial,Other, Oil Boiler ," 1,154,653.35 "," 5,180 ",59%,16%
+54,54,Industrial,Other, Oil Boiler ," 33,415.10 ", 791 ,59%,16%
+55,55,Offices,Electricity, Electric Resistive ," 793,016.63 ", 785 ,48%,16%
+56,56,Offices,Electricity, Electric Resistive ," 13,065,131.18 "," 111,067 ",48%,16%
+57,57,Offices,Electricity, Electric Resistive ," 319,434.15 "," 12,372 ",48%,16%
+58,58,Offices,Gas, Gas boiler ," 20,009,644.29 "," 12,270 ",48%,16%
+59,59,Offices,Gas, Gas boiler ," 13,027,930.42 "," 98,955 ",48%,16%
+60,60,Offices,Gas, Gas boiler ," 442,045.74 "," 17,578 ",48%,16%
+61,61,Offices,Other, Oil Boiler ," 3,914,740.34 "," 1,762 ",48%,16%
+62,62,Offices,Other, Oil Boiler ," 2,443,124.48 "," 16,364 ",48%,16%
+63,63,Offices,Other, Oil Boiler ," 15,972.34 ", 654 ,48%,16%
+64,64,Retail,Electricity, Electric Resistive ," 5,205,779.54 "," 12,156 ",44%,16%
+65,65,Retail,Electricity, Electric Resistive ," 11,983,360.51 "," 107,533 ",44%,16%
+66,66,Retail,Electricity, Electric Resistive ," 146,865.27 "," 10,276 ",44%,16%
+67,67,Retail,Gas, Gas boiler ," 17,446,991.30 "," 11,614 ",44%,16%
+68,68,Retail,Gas, Gas boiler ," 2,233,467.73 "," 20,632 ",44%,16%
+69,69,Retail,Gas, Gas boiler ," 101,456.78 "," 7,004 ",44%,16%
+70,70,Retail,Other, Oil Boiler ," 1,988,808.81 "," 1,564 ",44%,16%
+71,71,Retail,Other, Oil Boiler ," 341,278.31 "," 2,506 ",44%,16%
+72,72,Retail,Other, Oil Boiler ," 2,947.75 ", 200 ,44%,16%
+73,73,Storage,Electricity, Electric Resistive ," 579,630.77 ", 248 ,51%,16%
+74,74,Storage,Electricity, Electric Resistive ," 4,625,673.02 "," 15,869 ",51%,16%
+75,75,Storage,Electricity, Electric Resistive ," 206,331.36 "," 3,525 ",51%,16%
+76,76,Storage,Gas, Gas boiler ," 11,708,493.42 "," 2,144 ",51%,16%
+77,77,Storage,Gas, Gas boiler ," 7,790,156.90 "," 20,198 ",51%,16%
+78,78,Storage,Gas, Gas boiler ," 347,240.31 "," 6,029 ",51%,16%
+79,79,Storage,Other, Oil Boiler ," 19,668,659.56 "," 3,980 ",51%,16%
+80,80,Storage,Other, Oil Boiler ," 3,831,219.30 "," 5,760 ",51%,16%
+81,81,Storage,Other, Oil Boiler ," 15,864.87 ", 268 ,51%,16%
+82,7,"Community, arts & leisure",Other, Biomass boiler ," 1,078,829 ", 287 ,84%,16%
+83,8,"Community, arts & leisure",Other, Biomass boiler ," 420,013 ", 760 ,84%,16%
+84,9,"Community, arts & leisure",Other, Biomass boiler ," 9,658 ", 57 ,84%,16%
+85,16,Education,Other, Biomass boiler ," 317,382 ", 40 ,85%,16%
+86,17,Education,Other, Biomass boiler ," 318,629 ", 222 ,85%,16%
+87,18,Education,Other, Biomass boiler ," 1,817 ", 11 ,85%,16%
+88,34,Health,Other, Biomass boiler ," 24,454 ", 5 ,74%,16%
+89,35,Health,Other, Biomass boiler ," 153,100 ", 485 ,74%,16%
+90,36,Health,Other, Biomass boiler ," 4,391 ", 82 ,74%,16%
+91,43,Hospitality,Other, Biomass boiler ," 6,931,847 "," 4,483 ",48%,16%
+92,44,Hospitality,Other, Biomass boiler ," 686,192 "," 2,358 ",48%,16%
+93,45,Hospitality,Other, Biomass boiler ," 2,659 ", 100 ,48%,16%
+94,52,Industrial,Other, Biomass boiler ," 395,625 ", 197 ,59%,16%
+95,53,Industrial,Other, Biomass boiler ," 1,180,360 "," 5,295 ",59%,16%
+96,54,Industrial,Other, Biomass boiler ," 34,159 ", 808 ,59%,16%
+97,61,Offices,Other, Biomass boiler ," 3,206,109 "," 1,443 ",48%,16%
+98,62,Offices,Other, Biomass boiler ," 2,000,879 "," 13,401 ",48%,16%
+99,63,Offices,Other, Biomass boiler ," 13,081 ", 536 ,48%,16%
+100,70,Retail,Other, Biomass boiler ," 2,322,087 "," 1,826 ",44%,16%
+101,71,Retail,Other, Biomass boiler ," 398,469 "," 2,927 ",44%,16%
+102,72,Retail,Other, Biomass boiler ," 3,442 ", 233 ,44%,16%
+103,79,Storage,Other, Biomass boiler ," 5,869,955 "," 1,188 ",51%,16%
+104,80,Storage,Other, Biomass boiler ," 1,143,397 "," 1,719 ",51%,16%
+105,81,Storage,Other, Biomass boiler ," 4,735 ", 80 ,51%,16%
