@@ -1360,6 +1360,7 @@ console.log('temp',data.layers[v]);
 				console.warn('No colour scale '+s+' exists');
 				return '';
 			}
+			if(typeof v!=="number") v = 0;
 			if(typeof min!=="number") min = 0;
 			if(typeof max!=="number") max = 1;
 			cs = scales[s].stops;
