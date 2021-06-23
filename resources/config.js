@@ -36,7 +36,7 @@ S(document).ready(function(){
 			"view": "LAD",
 			"key": "2020",
 			"parameter": "heat-demand-total",
-			"scale": "relative",
+			"scale": "absolute",
 			"years": { 'min': 2020, 'max': 2050 },
 			"map": {
 				"bounds": [[50.6,-1.55],[53,2]],
@@ -208,7 +208,7 @@ S(document).ready(function(){
 									return (key%10==0 ? key.substr(0,4) : '');
 								},
 								'formatY': function(key){
-									return key.toLocaleString();
+									return _obj.formatValue(key);
 								},
 								'formatBar': function(key,val,series){
 									return (typeof series==="number" ? "series-"+series : "");
@@ -221,6 +221,7 @@ S(document).ready(function(){
 							// Add an event
 							chart.on('barover',function(e){
 								S('.balloon').remove();
+								v = this.bins[e.bin].value;
 								S(e.event.currentTarget).find('.bar.series-0').append(
 									"<div class=\"balloon\">"+this.bins[e.bin].key+": "+_obj.formatValue(v)+"</div>"
 								);
@@ -274,7 +275,7 @@ S(document).ready(function(){
 									return (key%10==0 ? key.substr(0,4) : '');
 								},
 								'formatY': function(key){
-									return key.toLocaleString();
+									return _obj.formatValue(key);
 								},
 								'formatBar': function(key,val,series){
 									return (typeof series==="number" ? "series-"+series : "");
@@ -287,6 +288,7 @@ S(document).ready(function(){
 							// Add an event
 							chart.on('barover',function(e){
 								S('.balloon').remove();
+								v = this.bins[e.bin].value;
 								S(e.event.currentTarget).find('.bar.series-0').append(
 									"<div class=\"balloon\">"+this.bins[e.bin].key+": "+_obj.formatValue(v)+"</div>"
 								);
@@ -340,7 +342,7 @@ S(document).ready(function(){
 									return (key%10==0 ? key.substr(0,4) : '');
 								},
 								'formatY': function(key){
-									return key.toLocaleString();
+									return _obj.formatValue(key);
 								},
 								'formatBar': function(key,val,series){
 									return (typeof series==="number" ? "series-"+series : "");
@@ -353,6 +355,7 @@ S(document).ready(function(){
 							// Add an event
 							chart.on('barover',function(e){
 								S('.balloon').remove();
+								v = this.bins[e.bin].value;
 								S(e.event.currentTarget).find('.bar.series-0').append(
 									"<div class=\"balloon\">"+this.bins[e.bin].key+": "+_obj.formatValue(v)+"</div>"
 								);
@@ -411,7 +414,7 @@ S(document).ready(function(){
 									return (key%10==0 ? key.substr(0,4) : '');
 								},
 								'formatY': function(key){
-									return key.toLocaleString();
+									return _obj.formatValue(key);
 								},
 								'formatBar': function(key,val,series){
 									return (typeof series==="number" ? "series-"+series : "");
@@ -424,6 +427,7 @@ S(document).ready(function(){
 							// Add an event
 							chart.on('barover',function(e){
 								S('.balloon').remove();
+								v = this.bins[e.bin].value;
 								S(e.event.currentTarget).find('.bar.series-0').append(
 									"<div class=\"balloon\">"+this.bins[e.bin].key+": "+_obj.formatValue(v)+"</div>"
 								);
