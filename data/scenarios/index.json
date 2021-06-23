@@ -13,7 +13,18 @@
 			"heat-demand-met-heatpump": { "dataBy": "lsoa", "file": "lsoa/pack1-4A-LCH-heatpump-CT.csv", "key": "LSOA11CD" },
 			"heat-demand-met-hybridhp": { "dataBy": "lsoa", "file": "lsoa/pack1-4A-LCH-hybridhp-CT.csv", "key": "LSOA11CD" },
 			"heat-demand-met-hydrogen": { "dataBy": "lsoa", "file": "lsoa/pack1-4A-LCH-hydrogen-CT.csv", "key": "LSOA11CD" },
-			"domestic-new-build": { "dataBy": "lsoa", "file": "lsoa/pack2-5A-dom-new-build-projections.csv", "key": "LSOA11CD" }
+			"domestic-new-build": { "dataBy": "lsoa", "file": "lsoa/pack2-5A-dom-new-build-projections.csv", "key": "LSOA11CD" },
+			"fuelbill-all-0-500": { "dataBy": "lsoa", "file": "lsoa/pack3-1A-fuelbill-0-500-CT.csv", "key": "LSOA11CD" },
+			"fuelbill-all-500-1000": { "dataBy": "lsoa", "file": "lsoa/pack3-1A-fuelbill-500-1000-CT.csv", "key": "LSOA11CD" },
+			"fuelbill-all-1000-1500": { "dataBy": "lsoa", "file": "lsoa/pack3-1A-fuelbill-1000-1500-CT.csv", "key": "LSOA11CD" },
+			"fuelbill-all-1500-2000": { "dataBy": "lsoa", "file": "lsoa/pack3-1A-fuelbill-1500-2000-CT.csv", "key": "LSOA11CD" },
+			"fuelbill-all-2000": { "dataBy": "lsoa", "file": "lsoa/pack3-1A-fuelbill-2000-CT.csv", "key": "LSOA11CD" },
+			"fuelbill-poor-0-500": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-0-500-CT.csv", "key": "LSOA11CD" },
+			"fuelbill-poor-500-1000": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-500-1000-CT.csv", "key": "LSOA11CD" },
+			"fuelbill-poor-1000-1500": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-1000-1500-CT.csv", "key": "LSOA11CD" },
+			"fuelbill-poor-1500-2000": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-1500-2000-CT.csv", "key": "LSOA11CD" },
+			"fuelbill-poor-2000": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-2000-CT.csv", "key": "LSOA11CD" }
+
 		}
 	},
 	"System Transformation": {
@@ -30,7 +41,17 @@
 			"heat-demand-met-heatpump": { "dataBy": "lsoa", "file": "lsoa/pack1-4A-LCH-heatpump-ST.csv", "key": "LSOA11CD" },
 			"heat-demand-met-hybridhp": { "dataBy": "lsoa", "file": "lsoa/pack1-4A-LCH-hybridhp-ST.csv", "key": "LSOA11CD" },
 			"heat-demand-met-hydrogen": { "dataBy": "lsoa", "file": "lsoa/pack1-4A-LCH-hydrogen-ST.csv", "key": "LSOA11CD" },
-			"domestic-new-build": { "dataBy": "lsoa", "file": "lsoa/pack2-5A-dom-new-build-projections.csv", "key": "LSOA11CD" }
+			"domestic-new-build": { "dataBy": "lsoa", "file": "lsoa/pack2-5A-dom-new-build-projections.csv", "key": "LSOA11CD" },
+			"fuelbill-all-0-500": { "dataBy": "lsoa", "file": "lsoa/pack3-1A-fuelbill-0-500-ST.csv", "key": "LSOA11CD" },
+			"fuelbill-all-500-1000": { "dataBy": "lsoa", "file": "lsoa/pack3-1A-fuelbill-500-1000-ST.csv", "key": "LSOA11CD" },
+			"fuelbill-all-1000-1500": { "dataBy": "lsoa", "file": "lsoa/pack3-1A-fuelbill-1000-1500-ST.csv", "key": "LSOA11CD" },
+			"fuelbill-all-1500-2000": { "dataBy": "lsoa", "file": "lsoa/pack3-1A-fuelbill-1500-2000-ST.csv", "key": "LSOA11CD" },
+			"fuelbill-all-2000": { "dataBy": "lsoa", "file": "lsoa/pack3-1A-fuelbill-2000-ST.csv", "key": "LSOA11CD" },
+			"fuelbill-poor-0-500": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-0-500-ST.csv", "key": "LSOA11CD" },
+			"fuelbill-poor-500-1000": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-500-1000-ST.csv", "key": "LSOA11CD" },
+			"fuelbill-poor-1000-1500": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-1000-1500-ST.csv", "key": "LSOA11CD" },
+			"fuelbill-poor-1500-2000": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-1500-2000-ST.csv", "key": "LSOA11CD" },
+			"fuelbill-poor-2000": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-2000-ST.csv", "key": "LSOA11CD" }
 		}
 	},
 	"Leading the Way": {
@@ -47,7 +68,17 @@
 			"heat-demand-met-heatpump": { "dataBy": "lsoa", "file": "lsoa/pack1-4A-LCH-heatpump-LW.csv", "key": "LSOA11CD" },
 			"heat-demand-met-hybridhp": { "dataBy": "lsoa", "file": "lsoa/pack1-4A-LCH-hybridhp-LW.csv", "key": "LSOA11CD" },
 			"heat-demand-met-hydrogen": { "dataBy": "lsoa", "file": "lsoa/pack1-4A-LCH-hydrogen-LW.csv", "key": "LSOA11CD" },
-			"domestic-new-build": { "dataBy": "lsoa", "file": "lsoa/pack2-5A-dom-new-build-projections.csv", "key": "LSOA11CD" }
+			"domestic-new-build": { "dataBy": "lsoa", "file": "lsoa/pack2-5A-dom-new-build-projections.csv", "key": "LSOA11CD" },
+			"fuelbill-all-0-500": { "dataBy": "lsoa", "file": "lsoa/pack3-1A-fuelbill-0-500-LW.csv", "key": "LSOA11CD" },
+			"fuelbill-all-500-1000": { "dataBy": "lsoa", "file": "lsoa/pack3-1A-fuelbill-500-1000-LW.csv", "key": "LSOA11CD" },
+			"fuelbill-all-1000-1500": { "dataBy": "lsoa", "file": "lsoa/pack3-1A-fuelbill-1000-1500-LW.csv", "key": "LSOA11CD" },
+			"fuelbill-all-1500-2000": { "dataBy": "lsoa", "file": "lsoa/pack3-1A-fuelbill-1500-2000-LW.csv", "key": "LSOA11CD" },
+			"fuelbill-all-2000": { "dataBy": "lsoa", "file": "lsoa/pack3-1A-fuelbill-2000-LW.csv", "key": "LSOA11CD" },
+			"fuelbill-poor-0-500": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-0-500-LW.csv", "key": "LSOA11CD" },
+			"fuelbill-poor-500-1000": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-500-1000-LW.csv", "key": "LSOA11CD" },
+			"fuelbill-poor-1000-1500": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-1000-1500-LW.csv", "key": "LSOA11CD" },
+			"fuelbill-poor-1500-2000": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-1500-2000-LW.csv", "key": "LSOA11CD" },
+			"fuelbill-poor-2000": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-2000-LW.csv", "key": "LSOA11CD" }
 		}
 	}
 }

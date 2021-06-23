@@ -13,7 +13,7 @@
 	// Main function
 	function FES(config){
 
-		this.version = "1.3.1";
+		this.version = "1.4.0";
 		if(!config) config = {};
 		this.options = (config.options||{});
 		this.parameters = {};
@@ -399,9 +399,10 @@
 				return this;
 			}else{
 				
+				// v = the view type
 				if(!data.layers[v]){
 					// Default with no mapping needed
-					data.layers[v] = {'values':{},'fullrange':{}};
+					data.layers[v] = {'values':{},'fullrange':{},'processing':{}};
 
 					min = 1e100;
 					max = -1e100;
@@ -412,18 +413,21 @@
 					// Loop over data rows
 					for(r = 0; r < d.raw.rows.length; r++){
 
-						// The primary key
+						// The primary key e.g. an LSOA11CD
 						pkey = d.raw.rows[r][data.col];
 
 						if(this.mapping[data.dataBy][id].data){
 							if(this.mapping[data.dataBy][id].data[pkey]){
 								for(a in this.mapping[data.dataBy][id].data[pkey]){
 									if(!data.layers[v].values[a]) data.layers[v].values[a] = {};
+									if(!data.layers[v].processing[a]) data.layers[v].processing[a] = {};
 									for(c = 0; c < d.raw.fields.name.length; c++){
 										// Set values to zero
 										key = d.raw.fields.name[c];
+										// The column seems to be a year
 										if(c != data.col && parseInt(key)==key && !data.layers[v].values[a][key]){
 											data.layers[v].values[a][key] = 0;
+											data.layers[v].processing[a][key] = [];
 										}
 									}
 								}
@@ -431,10 +435,16 @@
 						}else{
 							if(!data.layers[v].values[pkey]) data.layers[v].values[pkey] = {};
 						}
-						
+					}
+
+					for(r = 0; r < d.raw.rows.length; r++){
+
+						// The primary key e.g. an LSOA11CD
+						pkey = d.raw.rows[r][data.col];
 
 						// Loop over columns in the raw data
 						for(c = 0; c < d.raw.fields.name.length; c++){
+							// Check if the column seems to be a year (the int version should match the label)
 							if(c != data.col && parseInt(d.raw.fields.name[c])==d.raw.fields.name[c]){
 
 								if(d.raw.rows[r][c]=="") d.raw.rows[r][c] = 0;
@@ -447,28 +457,38 @@
 										key = d.raw.fields.name[c]+"";
 
 										for(a in this.mapping[data.dataBy][id].data[pkey]){
-
-											if(this.parameters[p].combine=="sum"){
-
-												// Sum the fractional amount for this mapped area
-												data.layers[v].values[a][key] += (val*this.mapping[data.dataBy][id].data[pkey][a]);
-
-											}else if(this.parameters[p].combine=="max"){
-
-												// Find the maximum value for mapped areas
-												data.layers[v].values[a][key] = Math.max(val,data.layers[v].values[a][key]);
-
-											}
+											data.layers[v].processing[a][key].push({'v':val,'src':pkey,'f':this.mapping[data.dataBy][id].data[pkey][a]});
 										}
 									}
-
 								}else{
 									// If this layer uses the current source as "data" we can set it
-									data.layers[v].values[pkey][d.raw.fields.name[c]] = (typeof val==="number") ? val : d.raw.rows[r][c];
+									data.layers[v].processing[pkey][d.raw.fields.name[c]].push({'v':(typeof val==="number") ? val : d.raw.rows[r][c],'src':pkey,'f':1});
 								}
 							}
 						}
+
 					}
+
+					for(a in data.layers[v].processing){
+						for(key in data.layers[v].processing[a]){
+							val = 0;
+							for(i = 0; i < data.layers[v].processing[a][key].length; i++){
+								if(this.parameters[p].combine=="sum" || this.parameters[p].combine=="average"){
+									// Find the fractional contribution
+									val += data.layers[v].processing[a][key][i].v*data.layers[v].processing[a][key][i].f;
+								}else if(this.parameters[p].combine=="max"){
+									// Find the maximum of any contribution
+									val = Math.max(val,data.layers[v].processing[a][key][i].v);
+								}
+							}
+							if(this.parameters[p].combine=="average"){
+								val /= data.layers[v].processing[a][key].length;
+							}
+							data.layers[v].values[a][key] = val;
+						}
+					}
+
+console.log('temp',data.layers[v]);
 				}else{
 					console.info('Already processed '+v+' '+id)
 				}

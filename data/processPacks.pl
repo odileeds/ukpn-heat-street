@@ -2,6 +2,8 @@
 
 use Data::Dumper;
 
+
+
 # Pack 1 - 1A
 %data = getCSV("pack1/1A-total-heat-demand.csv",{'id'=>'LSOA11CD','map'=>{'LSOA code'=>'LSOA11CD'},'headrow'=>10});
 saveCSV("scenarios/LSOA/pack1-1A-total-heat-demand-CT.csv",{'data'=>\%data,'columns'=>[
@@ -206,13 +208,395 @@ saveCSV("scenarios/LSOA/pack2-5A-dom-new-build-projections.csv",{'data'=>\%data,
 ]});
 
 
+# Pack 3 - 1A
+%data = getCSV("pack3/1A-all-stock-fuel-bill-bands.csv",{'id'=>'LSOA','debug'=>1,'map'=>{},'headrow'=>9});
+saveCSV("scenarios/LSOA/pack3-1A-fuelbill-0-500-CT.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic£0 - £500','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandConsumer Transformation2030Domestic£0 - £500','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandConsumer Transformation2050Domestic£0 - £500','rename'=>'2050','number'=>1,'dp'=>2}
+]});
+saveCSV("scenarios/LSOA/pack3-1A-fuelbill-0-500-ST.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic£0 - £500','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandSystem Transformation2030Domestic£0 - £500','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandSystem Transformation2050Domestic£0 - £500','rename'=>'2050','number'=>1,'dp'=>2}
+]});
+saveCSV("scenarios/LSOA/pack3-1A-fuelbill-0-500-LW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic£0 - £500','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandLeading the Way2030Domestic£0 - £500','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandLeading the Way2050Domestic£0 - £500','rename'=>'2050','number'=>1,'dp'=>2}
+]});
+
+saveCSV("scenarios/LSOA/pack3-1A-fuelbill-500-1000-CT.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic£500 - £1000','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandConsumer Transformation2030Domestic£500 - £1000','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandConsumer Transformation2050Domestic£500 - £1000','rename'=>'2050','number'=>1,'dp'=>2}
+]});
+saveCSV("scenarios/LSOA/pack3-1A-fuelbill-500-1000-ST.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic£500 - £1000','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandSystem Transformation2030Domestic£500 - £1000','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandSystem Transformation2050Domestic£500 - £1000','rename'=>'2050','number'=>1,'dp'=>2}
+]});
+saveCSV("scenarios/LSOA/pack3-1A-fuelbill-500-1000-LW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic£500 - £1000','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandLeading the Way2030Domestic£500 - £1000','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandLeading the Way2050Domestic£500 - £1000','rename'=>'2050','number'=>1,'dp'=>2}
+]});
+
+saveCSV("scenarios/LSOA/pack3-1A-fuelbill-1000-1500-CT.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic£1000 - £1500','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandConsumer Transformation2030Domestic£1000 - £1500','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandConsumer Transformation2050Domestic£1000 - £1500','rename'=>'2050','number'=>1,'dp'=>2}
+]});
+saveCSV("scenarios/LSOA/pack3-1A-fuelbill-1000-1500-ST.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic£1000 - £1500','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandSystem Transformation2030Domestic£1000 - £1500','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandSystem Transformation2050Domestic£1000 - £1500','rename'=>'2050','number'=>1,'dp'=>2}
+]});
+saveCSV("scenarios/LSOA/pack3-1A-fuelbill-1000-1500-LW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic£1000 - £1500','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandLeading the Way2030Domestic£1000 - £1500','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandLeading the Way2050Domestic£1000 - £1500','rename'=>'2050','number'=>1,'dp'=>2}
+]});
+
+saveCSV("scenarios/LSOA/pack3-1A-fuelbill-1500-2000-CT.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic£1500 - £2000','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandConsumer Transformation2030Domestic£1500 - £2000','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandConsumer Transformation2050Domestic£1500 - £2000','rename'=>'2050','number'=>1,'dp'=>2}
+]});
+saveCSV("scenarios/LSOA/pack3-1A-fuelbill-1500-2000-ST.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic£1500 - £2000','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandSystem Transformation2030Domestic£1500 - £2000','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandSystem Transformation2050Domestic£1500 - £2000','rename'=>'2050','number'=>1,'dp'=>2}
+]});
+saveCSV("scenarios/LSOA/pack3-1A-fuelbill-1500-2000-LW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic£1500 - £2000','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandLeading the Way2030Domestic£1500 - £2000','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandLeading the Way2050Domestic£1500 - £2000','rename'=>'2050','number'=>1,'dp'=>2}
+]});
+
+saveCSV("scenarios/LSOA/pack3-1A-fuelbill-2000-CT.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic>£2000','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandConsumer Transformation2030Domestic>£2000','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandConsumer Transformation2050Domestic>£2000','rename'=>'2050','number'=>1,'dp'=>2}
+]});
+saveCSV("scenarios/LSOA/pack3-1A-fuelbill-2000-ST.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic>£2000','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandSystem Transformation2030Domestic>£2000','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandSystem Transformation2050Domestic>£2000','rename'=>'2050','number'=>1,'dp'=>2}
+]});
+saveCSV("scenarios/LSOA/pack3-1A-fuelbill-2000-LW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic>£2000','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandLeading the Way2030Domestic>£2000','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandLeading the Way2050Domestic>£2000','rename'=>'2050','number'=>1,'dp'=>2}
+]});
+
+
+# Pack 3 - 2A
+%data = getCSV("pack3/2A-fuel-poor-fuel-bill-bands.csv",{'id'=>'LSOA','debug'=>1,'map'=>{},'headrow'=>8});
+saveCSV("scenarios/LSOA/pack3-2A-fuelbill-0-500-CT.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic£0 - £500','rename'=>'2020','number'=>1},
+	{'label'=>'Fraction_households_in_fuel_bandConsumer Transformation2030Domestic£0 - £500','rename'=>'2030','number'=>1},
+	{'label'=>'Fraction_households_in_fuel_bandConsumer Transformation2050Domestic£0 - £500','rename'=>'2050','number'=>1}
+]});
+saveCSV("scenarios/LSOA/pack3-2A-fuelbill-0-500-ST.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic£0 - £500','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandSystem Transformation2030Domestic£0 - £500','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandSystem Transformation2050Domestic£0 - £500','rename'=>'2050','number'=>1,'dp'=>2}
+]});
+saveCSV("scenarios/LSOA/pack3-2A-fuelbill-0-500-LW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic£0 - £500','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandLeading the Way2030Domestic£0 - £500','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandLeading the Way2050Domestic£0 - £500','rename'=>'2050','number'=>1,'dp'=>2}
+]});
+
+saveCSV("scenarios/LSOA/pack3-2A-fuelbill-500-1000-CT.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic£500 - £1000','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandConsumer Transformation2030Domestic£500 - £1000','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandConsumer Transformation2050Domestic£500 - £1000','rename'=>'2050','number'=>1,'dp'=>2}
+]});
+saveCSV("scenarios/LSOA/pack3-2A-fuelbill-500-1000-ST.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic£500 - £1000','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandSystem Transformation2030Domestic£500 - £1000','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandSystem Transformation2050Domestic£500 - £1000','rename'=>'2050','number'=>1,'dp'=>2}
+]});
+saveCSV("scenarios/LSOA/pack3-2A-fuelbill-500-1000-LW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic£500 - £1000','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandLeading the Way2030Domestic£500 - £1000','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandLeading the Way2050Domestic£500 - £1000','rename'=>'2050','number'=>1,'dp'=>2}
+]});
+
+saveCSV("scenarios/LSOA/pack3-2A-fuelbill-1000-1500-CT.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic£1000 - £1500','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandConsumer Transformation2030Domestic£1000 - £1500','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandConsumer Transformation2050Domestic£1000 - £1500','rename'=>'2050','number'=>1,'dp'=>2}
+]});
+saveCSV("scenarios/LSOA/pack3-2A-fuelbill-1000-1500-ST.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic£1000 - £1500','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandSystem Transformation2030Domestic£1000 - £1500','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandSystem Transformation2050Domestic£1000 - £1500','rename'=>'2050','number'=>1,'dp'=>2}
+]});
+saveCSV("scenarios/LSOA/pack3-2A-fuelbill-1000-1500-LW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic£1000 - £1500','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandLeading the Way2030Domestic£1000 - £1500','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandLeading the Way2050Domestic£1000 - £1500','rename'=>'2050','number'=>1,'dp'=>2}
+]});
+
+saveCSV("scenarios/LSOA/pack3-2A-fuelbill-1500-2000-CT.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic£1500 - £2000','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandConsumer Transformation2030Domestic£1500 - £2000','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandConsumer Transformation2050Domestic£1500 - £2000','rename'=>'2050','number'=>1,'dp'=>2}
+]});
+saveCSV("scenarios/LSOA/pack3-2A-fuelbill-1500-2000-ST.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic£1500 - £2000','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandSystem Transformation2030Domestic£1500 - £2000','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandSystem Transformation2050Domestic£1500 - £2000','rename'=>'2050','number'=>1,'dp'=>2}
+]});
+saveCSV("scenarios/LSOA/pack3-2A-fuelbill-1500-2000-LW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic£1500 - £2000','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandLeading the Way2030Domestic£1500 - £2000','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandLeading the Way2050Domestic£1500 - £2000','rename'=>'2050','number'=>1,'dp'=>2}
+]});
+
+saveCSV("scenarios/LSOA/pack3-2A-fuelbill-2000-CT.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic>£2000','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandConsumer Transformation2030Domestic>£2000','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandConsumer Transformation2050Domestic>£2000','rename'=>'2050','number'=>1,'dp'=>2}
+]});
+saveCSV("scenarios/LSOA/pack3-2A-fuelbill-2000-ST.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic>£2000','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandSystem Transformation2030Domestic>£2000','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandSystem Transformation2050Domestic>£2000','rename'=>'2050','number'=>1,'dp'=>2}
+]});
+saveCSV("scenarios/LSOA/pack3-2A-fuelbill-2000-LW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'Fraction_households_in_fuel_bandBaseline2020Domestic>£2000','rename'=>'2020','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandLeading the Way2030Domestic>£2000','rename'=>'2030','number'=>1,'dp'=>2},
+	{'label'=>'Fraction_households_in_fuel_bandLeading the Way2050Domestic>£2000','rename'=>'2050','number'=>1,'dp'=>2}
+]});
 
 
 
+# Pack 4 - CO2-emissions
+%data = getCSV("pack4/CO2-emissions.csv",{'id'=>'LSOA','debug'=>1,'map'=>{},'headrow'=>9});
+saveCSV("scenarios/LSOA/pack4-co2emissions-domestic-CT.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'2020-existing domestic','rename'=>'2020','number'=>1},
+	{'label'=>'CT-2030-existing domestic','rename'=>'2030','number'=>1},
+	{'label'=>'CT-2050-existing domestic','rename'=>'2050','number'=>1}
+]});
+saveCSV("scenarios/LSOA/pack4-co2emissions-nondomestic-CT.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'2020-Nondomestic','rename'=>'2020','number'=>1},
+	{'label'=>'CT-2030-NonDomestic','rename'=>'2030','number'=>1},
+	{'label'=>'CT-2050-NonDomestic','rename'=>'2050','number'=>1}
+]});
+saveCSV("scenarios/LSOA/pack4-co2emissions-districtheating-CT.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'2020-District heating','rename'=>'2020','number'=>1},
+	{'label'=>'CT-2030-District heating','rename'=>'2030','number'=>1},
+	{'label'=>'CT-2050-District heating','rename'=>'2050','number'=>1}
+]});
+saveCSV("scenarios/LSOA/pack4-co2emissions-newbuild-CT.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'2020-New build','rename'=>'2020','number'=>1},
+	{'label'=>'CT-2030-New build','rename'=>'2030','number'=>1},
+	{'label'=>'CT-2050-New build','rename'=>'2050','number'=>1}
+]});
+saveCSV("scenarios/LSOA/pack4-co2emissions-total-CT.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'2020-Total','rename'=>'2020','number'=>1},
+	{'label'=>'CT-2030-Total','rename'=>'2030','number'=>1},
+	{'label'=>'CT-2050-Total','rename'=>'2050','number'=>1}
+]});
+
+saveCSV("scenarios/LSOA/pack4-co2emissions-domestic-ST.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'2020-existing domestic','rename'=>'2020','number'=>1},
+	{'label'=>'ST-2030-existing domestic','rename'=>'2030','number'=>1},
+	{'label'=>'ST-2050-existing domestic','rename'=>'2050','number'=>1}
+]});
+saveCSV("scenarios/LSOA/pack4-co2emissions-nondomestic-ST.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'2020-Nondomestic','rename'=>'2020','number'=>1},
+	{'label'=>'ST-2030-NonDomestic','rename'=>'2030','number'=>1},
+	{'label'=>'ST-2050-NonDomestic','rename'=>'2050','number'=>1}
+]});
+saveCSV("scenarios/LSOA/pack4-co2emissions-districtheating-ST.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'2020-District heating','rename'=>'2020','number'=>1},
+	{'label'=>'ST-2030-District heating','rename'=>'2030','number'=>1},
+	{'label'=>'ST-2050-District heating','rename'=>'2050','number'=>1}
+]});
+saveCSV("scenarios/LSOA/pack4-co2emissions-newbuild-ST.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'2020-New build','rename'=>'2020','number'=>1},
+	{'label'=>'ST-2030-New build','rename'=>'2030','number'=>1},
+	{'label'=>'ST-2050-New build','rename'=>'2050','number'=>1}
+]});
+saveCSV("scenarios/LSOA/pack4-co2emissions-total-ST.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'2020-Total','rename'=>'2020','number'=>1},
+	{'label'=>'ST-2030-Total','rename'=>'2030','number'=>1},
+	{'label'=>'ST-2050-Total','rename'=>'2050','number'=>1}
+]});
+
+saveCSV("scenarios/LSOA/pack4-co2emissions-domestic-LTW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'2020-existing domestic','rename'=>'2020','number'=>1},
+	{'label'=>'LTW-2030-existing domestic','rename'=>'2030','number'=>1},
+	{'label'=>'LTW-2050-existing domestic','rename'=>'2050','number'=>1}
+]});
+saveCSV("scenarios/LSOA/pack4-co2emissions-nondomestic-LTW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'2020-Nondomestic','rename'=>'2020','number'=>1},
+	{'label'=>'LTW-2030-NonDomestic','rename'=>'2030','number'=>1},
+	{'label'=>'LTW-2050-NonDomestic','rename'=>'2050','number'=>1}
+]});
+saveCSV("scenarios/LSOA/pack4-co2emissions-districtheating-LTW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'2020-District heating','rename'=>'2020','number'=>1},
+	{'label'=>'LTW-2030-District heating','rename'=>'2030','number'=>1},
+	{'label'=>'LTW-2050-District heating','rename'=>'2050','number'=>1}
+]});
+saveCSV("scenarios/LSOA/pack4-co2emissions-newbuild-LTW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'2020-New build','rename'=>'2020','number'=>1},
+	{'label'=>'LTW-2030-New build','rename'=>'2030','number'=>1},
+	{'label'=>'LTW-2050-New build','rename'=>'2050','number'=>1}
+]});
+saveCSV("scenarios/LSOA/pack4-co2emissions-total-LTW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'2020-Total','rename'=>'2020','number'=>1},
+	{'label'=>'LTW-2030-Total','rename'=>'2030','number'=>1},
+	{'label'=>'LTW-2050-Total','rename'=>'2050','number'=>1}
+]});
 
 
 
+# Pack 4 - LCH uptake
+%data = getCSV("pack4/LCH-uptake.csv",{'id'=>'LSOA','debug'=>1,'map'=>{},'headrow'=>9});
+saveCSV("scenarios/LSOA/pack4-lchuptake-directelectric-CT.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'CT-2030-Direct electric','rename'=>'2030','number'=>1},
+	{'label'=>'CT-2050-Direct electric','rename'=>'2050','number'=>1}
+]});
+saveCSV("scenarios/LSOA/pack4-lchuptake-heatpumps-CT.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'CT-2030-Heat pumps','rename'=>'2030','number'=>1},
+	{'label'=>'CT-2050-Heat pumps','rename'=>'2050','number'=>1}
+]});
+saveCSV("scenarios/LSOA/pack4-lchuptake-hybridhp-CT.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'CT-2030-Hybrid HP','rename'=>'2030','number'=>1},
+	{'label'=>'CT-2050-Hybrid HP','rename'=>'2050','number'=>1}
+]});
+saveCSV("scenarios/LSOA/pack4-lchuptake-hydrogen-CT.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'CT-2030-Hy','rename'=>'2030','number'=>1},
+	{'label'=>'CT-2050-Hy','rename'=>'2050','number'=>1}
+]});
+saveCSV("scenarios/LSOA/pack4-lchuptake-districtheating-CT.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'CT-2030-District heat','rename'=>'2030','number'=>1},
+	{'label'=>'CT-2050-District heat','rename'=>'2050','number'=>1}
+]});
+saveCSV("scenarios/LSOA/pack4-lchuptake-total-CT.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'CT-2030-Total LCH','rename'=>'2030','number'=>1},
+	{'label'=>'CT-2050-Total LCH','rename'=>'2050','number'=>1}
+]});
 
+saveCSV("scenarios/LSOA/pack4-lchuptake-directelectric-ST.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'ST-2030-Direct electric','rename'=>'2030','number'=>1},
+	{'label'=>'ST-2050-Direct electric','rename'=>'2050','number'=>1}
+]});
+saveCSV("scenarios/LSOA/pack4-lchuptake-heatpumps-ST.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'ST-2030-Heat pumps','rename'=>'2030','number'=>1},
+	{'label'=>'ST-2050-Heat pumps','rename'=>'2050','number'=>1}
+]});
+saveCSV("scenarios/LSOA/pack4-lchuptake-hybridhp-ST.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'ST-2030-Hybrid HP','rename'=>'2030','number'=>1},
+	{'label'=>'ST-2050-Hybrid HP','rename'=>'2050','number'=>1}
+]});
+saveCSV("scenarios/LSOA/pack4-lchuptake-hydrogen-ST.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'ST-2030-Hy','rename'=>'2030','number'=>1},
+	{'label'=>'ST-2050-Hy','rename'=>'2050','number'=>1}
+]});
+saveCSV("scenarios/LSOA/pack4-lchuptake-districtheating-ST.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'ST-2030-District heat','rename'=>'2030','number'=>1},
+	{'label'=>'ST-2050-District heat','rename'=>'2050','number'=>1}
+]});
+saveCSV("scenarios/LSOA/pack4-lchuptake-total-ST.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'ST-2030-Total LCH','rename'=>'2030','number'=>1},
+	{'label'=>'ST-2050-Total LCH','rename'=>'2050','number'=>1}
+]});
+
+
+saveCSV("scenarios/LSOA/pack4-lchuptake-directelectric-LW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'LTW-2030-Direct electric','rename'=>'2030','number'=>1},
+	{'label'=>'LTW-2050-Direct electric','rename'=>'2050','number'=>1}
+]});
+saveCSV("scenarios/LSOA/pack4-lchuptake-heatpumps-LW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'LTW-2030-Heat pumps','rename'=>'2030','number'=>1},
+	{'label'=>'LTW-2050-Heat pumps','rename'=>'2050','number'=>1}
+]});
+saveCSV("scenarios/LSOA/pack4-lchuptake-hybridhp-LW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'LTW-2030-Hybrid HP','rename'=>'2030','number'=>1},
+	{'label'=>'LTW-2050-Hybrid HP','rename'=>'2050','number'=>1}
+]});
+saveCSV("scenarios/LSOA/pack4-lchuptake-hydrogen-LW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'LTW-2030-Hy','rename'=>'2030','number'=>1},
+	{'label'=>'LTW-2050-Hy','rename'=>'2050','number'=>1}
+]});
+saveCSV("scenarios/LSOA/pack4-lchuptake-districtheating-LW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'LTW-2030-District heat','rename'=>'2030','number'=>1},
+	{'label'=>'LTW-2050-District heat','rename'=>'2050','number'=>1}
+]});
+saveCSV("scenarios/LSOA/pack4-lchuptake-total-LW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+	{'label'=>'LSOA','rename'=>'LSOA11CD'},
+	{'label'=>'LTW-2030-Total LCH','rename'=>'2030','number'=>1},
+	{'label'=>'LTW-2050-Total LCH','rename'=>'2050','number'=>1}
+]});
 
 
 
@@ -220,7 +604,7 @@ saveCSV("scenarios/LSOA/pack2-5A-dom-new-build-projections.csv",{'data'=>\%data,
 
 #########################################################
 sub saveCSV {
-	my (@cols,$c,$csv);
+	my (@cols,$c,$csv,$v);
 	my ($file, $props) = @_;
 	
 	#open(FILE,"pack1-1A-total-heat-demand-CT")
@@ -231,20 +615,30 @@ sub saveCSV {
 	$csv .= "\n";
 	foreach $id (sort(keys(%{$props->{'data'}}))){
 		for($c = 0; $c < @cols; $c++){
+			
 			$csv .= ($c > 0 ? ",":"");
 			if($cols[$c]{'label'} eq "id"){
 				$csv .= $id;
 			}else{
-				if($props->{'dp'} =~ /[0-9]/){
-					$csv .= sprintf("%0.".$props->{'dp'}."f",$props->{'data'}{$id}{$cols[$c]{'label'}});
-				}else{
-					$csv .= $props->{'data'}{$id}{$cols[$c]{'label'}};
+				$v = $props->{'data'}{$id}{$cols[$c]{'label'}};
+				if($cols[$c]{'number'}){
+					$v =~ s/[^0-9\.\-]//g;
 				}
+				if($props->{'dp'} =~ /[0-9]/){
+					$v = sprintf("%0.".$props->{'dp'}."f",$v);
+				}
+				if($v =~ /\.([0-9]*)/){
+					$v =~ s/0+$//g;
+					if($v =~ /\.$/){ $v .= "0"; }
+				}
+				if($v eq "0.0"){ $v = 0; }
+				$csv .= $v;
 			}
 		}
 		$csv .= "\n";
 	}
 	
+	print "Save $file\n";
 	open(FILE,">",$file);
 	print FILE $csv;
 	close(FILE);
