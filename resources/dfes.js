@@ -921,13 +921,14 @@ console.log('temp',data.layers[v]);
 		return this;
 	};
 	
-	FES.prototype.formatValue = function(v){
-		var units = this.parameters[this.options.parameter].units;
+	FES.prototype.formatValue = function(v,param){
+		if(!param) param = this.options.parameter;
+		var units = this.parameters[param].units;
 		// Do we need to round it?
-		if(typeof this.parameters[this.options.parameter].dp==="number") v = parseFloat(v.toFixed(this.parameters[this.options.parameter].dp))
-		if(this.parameters[this.options.parameter].format){
+		if(typeof this.parameters[param].dp==="number") v = parseFloat(v.toFixed(this.parameters[param].dp));
+		if(this.parameters[param].format){
 			try {
-				format = eval('('+this.parameters[this.options.parameter].format+')');
+				format = eval('('+this.parameters[param].format+')');
 			}catch(e){ }
 			return format.call(this,v,units);
 		}else{
