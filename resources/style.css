@@ -246,14 +246,14 @@ button { border-radius: 6.25rem; }
 	background-size: 50% 50%;
 	width: 30px;
 	height: 30px;
+	border-radius: 2px;
 	background-color: white;
-	float: right;
-	position: absolute;
-	top: 0px;
-	right: 0px;
 	z-index: 2;
+	display: block;
 	cursor: pointer;
+	position: relative;
 }
+.placesearch .submit:hover, .placesearch .submit:focus { background-color: #f4f4f4!important; }
 .placesearch form { position: relative; }
 .placesearch .pop-left { display: none; }
 .placesearch .typeahead-results { width: 100% }
@@ -262,10 +262,14 @@ button { border-radius: 6.25rem; }
 .placesearch .typeahead-results li > a { padding: 0.25em 0.5em; background: #efefef; text-decoration: none; display: block; color: inherit; width: 100%; }
 .placesearch .typeahead-results li.selected { background-color: #dfdfdf; color: black; }
 .placesearch .typeahead-results li.selected a { background-color: #444; color: white; }
-.placesearch.typing input[type="text"]{ display: block; min-width: 16em; height: 30px; padding: 0.25em 0.5em; border: 0px; }
+.placesearch.typing { width: 250px; }
+.placesearch.typing input[type="text"]{ display: block; min-width: 16em; height: 30px; padding: 0.25em 0.5em 0.25em 2em; border: 0px; }
 .placesearch.typing .typeahead-results { display: block; }
 .placesearch.typing .typeahead-results a { border: 0px; width: 100%; height: auto; text-align: left; }
-.placesearch.typing .pop-left { display: inline-block; position: relative; top: 0px; right: 0px; }
+.placesearch.typing .pop-left { display: inline-block; position: absolute!important; top: 0px; right: 0px; width: 100%; }
+
+
+.toggle-bg input:focus + .switch, .toggle-bg input:focus + input + .switch, .toggle-bg input:hover + .switch, .toggle-bg input:hover + input + .switch, .leaflet-control-zoom-out:focus, .leaflet-control-zoom-in:focus, .placesearch .submit:focus, .placesearch.typing input[type="text"]:focus, input:focus, select:focus, .noUi-handle:focus, .switch:focus { outline: 4px solid #00B6FF!important; }
 
 
 /* form toggle */
@@ -292,10 +296,6 @@ button { border-radius: 6.25rem; }
 	top: 0;
 	z-index: 0;
 	cursor: pointer;
-}
-/* As we are hiding the radio buttons we will make the switch glow when the radio button receives focus. We need to use some sibling selectors. */
-.toggle-bg input:focus + .switch, .toggle-bg input:focus + input + .switch, .toggle-bg input:hover + .switch, .toggle-bg input:hover + input + .switch {
-	box-shadow: 0 1px 1px #65727b, 0 0 1px #b6bdc2, 0 0 4px 2px #3366dd;
 }
 .switch{
 	cursor: pointer;
