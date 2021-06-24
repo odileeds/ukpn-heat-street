@@ -197,9 +197,14 @@ header img {
 }
 footer { padding-left: 0px; padding-right: 0px; }
 footer h2:first-child { margin-top: 0; }
-.columns { display: flex; padding-top: 3rem; padding-bottom: 3rem; }
-.left { width: 30%; max-width: 300px; margin-right: 2em; }
-.right { width: 70%; }
+.columns {
+	display: grid;
+	grid-template-columns: 300px 1fr;
+	grid-gap: 2em;
+	padding: 3rem;
+	max-width: 100%;
+	margin: auto;
+}
 .left h2 { font-size: 1rem; margin-bottom:0; }
 p { margin-bottom: 1em; }
 .spinner { position: absolute; left: 50%; top: 50%; transform: translate3d(-50%,-50%,0); z-index: 1000; }
@@ -348,8 +353,9 @@ button:disabled { opacity: 0.8; filter: grayscale(100%); cursor: not-allowed; }
 /* End of DFES styles */
 
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1080px) {
 	body{ overflow-x: hidden; }
-	.columns { display: block; }
+	.columns { display: block; padding: 1.5rem; }
+	h1 { padding-left: 1.5rem; }
 	.left, .right { width: 100%; max-width: 100%; }
 }
