@@ -1,7 +1,7 @@
 {
 	"Consumer Transformation": {
 		"description": "<ul><li>Reaches 2050 net zero target thanks to widespread electrification</li></ul>",
-		"color": "#ffbf22",
+		"color": "#FFC000",
 		"css": "consumer-transformation",
 		"data": {
 			"heat-demand-total": { "dataBy": "lsoa", "file": "lsoa/pack1-1A-total-heat-demand-CT.csv", "key": "LSOA11CD" },
@@ -23,13 +23,24 @@
 			"fuelbill-poor-500-1000": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-500-1000-CT.csv", "key": "LSOA11CD" },
 			"fuelbill-poor-1000-1500": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-1000-1500-CT.csv", "key": "LSOA11CD" },
 			"fuelbill-poor-1500-2000": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-1500-2000-CT.csv", "key": "LSOA11CD" },
-			"fuelbill-poor-2000": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-2000-CT.csv", "key": "LSOA11CD" }
+			"fuelbill-poor-2000": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-2000-CT.csv", "key": "LSOA11CD" },
+			"co2emissions-districtheating": { "dataBy": "lsoa", "file": "lsoa/pack4-co2emissions-districtheating-CT.csv", "key": "LSOA11CD" },
+			"co2emissions-domestic": { "dataBy": "lsoa", "file": "lsoa/pack4-co2emissions-domestic-CT.csv", "key": "LSOA11CD" },
+			"co2emissions-newbuild": { "dataBy": "lsoa", "file": "lsoa/pack4-co2emissions-newbuild-CT.csv", "key": "LSOA11CD" },
+			"co2emissions-nondomestic": { "dataBy": "lsoa", "file": "lsoa/pack4-co2emissions-nondomestic-CT.csv", "key": "LSOA11CD" },
+			"co2emissions-total": { "dataBy": "lsoa", "file": "lsoa/pack4-co2emissions-total-CT.csv", "key": "LSOA11CD" },
+			"lchuptake-directelectric": { "dataBy": "lsoa", "file": "lsoa/pack4-lchuptake-directelectric-CT.csv", "key": "LSOA11CD" },
+			"lchuptake-districtheating": { "dataBy": "lsoa", "file": "lsoa/pack4-lchuptake-districtheating-CT.csv", "key": "LSOA11CD" },
+			"lchuptake-heatpumps": { "dataBy": "lsoa", "file": "lsoa/pack4-lchuptake-heatpumps-CT.csv", "key": "LSOA11CD" },
+			"lchuptake-hybridhp": { "dataBy": "lsoa", "file": "lsoa/pack4-lchuptake-hybridhp-CT.csv", "key": "LSOA11CD" },
+			"lchuptake-hydrogen": { "dataBy": "lsoa", "file": "lsoa/pack4-lchuptake-hydrogen-CT.csv", "key": "LSOA11CD" },
+			"lchuptake-total": { "dataBy": "lsoa", "file": "lsoa/pack4-lchuptake-total-CT.csv", "key": "LSOA11CD" }
 
 		}
 	},
 	"System Transformation": {
 		"description": "<ul><li>Reaches 2050 net zero target thanks to a combination of electric and hydrogen technologies</li></ul>",
-		"color": "#5bccf5",
+		"color": "#00B0F0",
 		"css": "system-transformation",
 		"data": {
 			"heat-demand-total": { "dataBy": "lsoa", "file": "lsoa/pack1-1A-total-heat-demand-ST.csv", "key": "LSOA11CD" },
@@ -51,12 +62,24 @@
 			"fuelbill-poor-500-1000": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-500-1000-ST.csv", "key": "LSOA11CD" },
 			"fuelbill-poor-1000-1500": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-1000-1500-ST.csv", "key": "LSOA11CD" },
 			"fuelbill-poor-1500-2000": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-1500-2000-ST.csv", "key": "LSOA11CD" },
-			"fuelbill-poor-2000": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-2000-ST.csv", "key": "LSOA11CD" }
+			"fuelbill-poor-2000": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-2000-ST.csv", "key": "LSOA11CD" },
+			"co2emissions-districtheating": { "dataBy": "lsoa", "file": "lsoa/pack4-co2emissions-districtheating-ST.csv", "key": "LSOA11CD" },
+			"co2emissions-domestic": { "dataBy": "lsoa", "file": "lsoa/pack4-co2emissions-domestic-ST.csv", "key": "LSOA11CD" },
+			"co2emissions-newbuild": { "dataBy": "lsoa", "file": "lsoa/pack4-co2emissions-newbuild-ST.csv", "key": "LSOA11CD" },
+			"co2emissions-nondomestic": { "dataBy": "lsoa", "file": "lsoa/pack4-co2emissions-nondomestic-ST.csv", "key": "LSOA11CD" },
+			"co2emissions-total": { "dataBy": "lsoa", "file": "lsoa/pack4-co2emissions-total-ST.csv", "key": "LSOA11CD" },
+			"lchuptake-directelectric": { "dataBy": "lsoa", "file": "lsoa/pack4-lchuptake-directelectric-ST.csv", "key": "LSOA11CD" },
+			"lchuptake-districtheating": { "dataBy": "lsoa", "file": "lsoa/pack4-lchuptake-districtheating-ST.csv", "key": "LSOA11CD" },
+			"lchuptake-heatpumps": { "dataBy": "lsoa", "file": "lsoa/pack4-lchuptake-heatpumps-ST.csv", "key": "LSOA11CD" },
+			"lchuptake-hybridhp": { "dataBy": "lsoa", "file": "lsoa/pack4-lchuptake-hybridhp-ST.csv", "key": "LSOA11CD" },
+			"lchuptake-hydrogen": { "dataBy": "lsoa", "file": "lsoa/pack4-lchuptake-hydrogen-ST.csv", "key": "LSOA11CD" },
+			"lchuptake-total": { "dataBy": "lsoa", "file": "lsoa/pack4-lchuptake-total-ST.csv", "key": "LSOA11CD" }
+
 		}
 	},
 	"Leading the Way": {
 		"description": "<ul><li>Achieves net zero ahead of the 2050 target thanks to a combination of electric and hydrogen technologies</li></ul>",
-		"color": "#c2cd23",
+		"color": "#92D050",
 		"css": "leading-the-way",
 		"data": {
 			"heat-demand-total": { "dataBy": "lsoa", "file": "lsoa/pack1-1A-total-heat-demand-LW.csv", "key": "LSOA11CD" },
@@ -78,7 +101,18 @@
 			"fuelbill-poor-500-1000": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-500-1000-LW.csv", "key": "LSOA11CD" },
 			"fuelbill-poor-1000-1500": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-1000-1500-LW.csv", "key": "LSOA11CD" },
 			"fuelbill-poor-1500-2000": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-1500-2000-LW.csv", "key": "LSOA11CD" },
-			"fuelbill-poor-2000": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-2000-LW.csv", "key": "LSOA11CD" }
+			"fuelbill-poor-2000": { "dataBy": "lsoa", "file": "lsoa/pack3-2A-fuelbill-2000-LW.csv", "key": "LSOA11CD" },
+			"co2emissions-districtheating": { "dataBy": "lsoa", "file": "lsoa/pack4-co2emissions-districtheating-LW.csv", "key": "LSOA11CD" },
+			"co2emissions-domestic": { "dataBy": "lsoa", "file": "lsoa/pack4-co2emissions-domestic-LW.csv", "key": "LSOA11CD" },
+			"co2emissions-newbuild": { "dataBy": "lsoa", "file": "lsoa/pack4-co2emissions-newbuild-LW.csv", "key": "LSOA11CD" },
+			"co2emissions-nondomestic": { "dataBy": "lsoa", "file": "lsoa/pack4-co2emissions-nondomestic-LW.csv", "key": "LSOA11CD" },
+			"co2emissions-total": { "dataBy": "lsoa", "file": "lsoa/pack4-co2emissions-total-LW.csv", "key": "LSOA11CD" },
+			"lchuptake-directelectric": { "dataBy": "lsoa", "file": "lsoa/pack4-lchuptake-directelectric-LW.csv", "key": "LSOA11CD" },
+			"lchuptake-districtheating": { "dataBy": "lsoa", "file": "lsoa/pack4-lchuptake-districtheating-LW.csv", "key": "LSOA11CD" },
+			"lchuptake-heatpumps": { "dataBy": "lsoa", "file": "lsoa/pack4-lchuptake-heatpumps-LW.csv", "key": "LSOA11CD" },
+			"lchuptake-hybridhp": { "dataBy": "lsoa", "file": "lsoa/pack4-lchuptake-hybridhp-LW.csv", "key": "LSOA11CD" },
+			"lchuptake-hydrogen": { "dataBy": "lsoa", "file": "lsoa/pack4-lchuptake-hydrogen-LW.csv", "key": "LSOA11CD" },
+			"lchuptake-total": { "dataBy": "lsoa", "file": "lsoa/pack4-lchuptake-total-LW.csv", "key": "LSOA11CD" }
 		}
 	}
 }

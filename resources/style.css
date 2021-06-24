@@ -340,18 +340,12 @@ button:disabled { opacity: 0.8; filter: grayscale(100%); cursor: not-allowed; }
 .thinline { height: 2px; }
 .title { border-bottom: .0625rem solid #e0e0e0; color: black; background-color: white; background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url("https://innovation.ukpowernetworks.co.uk/wp-content/themes/ukpn-innov-theme/assets/images/home-banner_parallax_bg_desktop.png"); }
 
-/* DFES colours */
-.steady-progression { background-color: #868686; color: white; }
-.consumer-transformation { background-color: #ffbf22; color: black; }
-.system-transformation { background-color: #5bccf5; color: white; }
-.leading-the-way { background-color: #c2cd23; color: black; }
-.deep-electrification { background-color: #AB1236!important; color: white!important; }
-.deep-electrification-text { color: #AB1236!important; }
-.high-hydrogen { background-color: #0085CA!important; color: white!important; }
-.high-hydrogen-text { color: #0085CA!important; }
-.net-zero { background-color: #00AB84!important; color: white!important; }
-.net-zero-text { color: #00AB84!important; }
+/* Scenario colours */
+.consumer-transformation { background-color: #FFC000; color: black; }
+.system-transformation { background-color: #00B0F0; color: black; }
+.leading-the-way { background-color: #92D050; color: black; }
 .about { background: #454a60; }
+/* End of DFES styles */
 
 
 @media only screen and (max-width: 1000px) {
@@ -359,4 +353,3 @@ button:disabled { opacity: 0.8; filter: grayscale(100%); cursor: not-allowed; }
 	.columns { display: block; }
 	.left, .right { width: 100%; max-width: 100%; }
 }
-/* End of DFES styles */
