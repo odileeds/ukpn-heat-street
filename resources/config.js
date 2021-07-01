@@ -180,7 +180,7 @@ S(document).ready(function(){
 				"popup": {
 					"text": function(attr){
 						file = 'LEP-'+attr.properties.lep20cd+'-'+this.options.scenario.replace(/ /,"").toLowerCase()+'-'+this.options.parameter+'.png';
-						return '<h3>'+(attr.properties.lep20nm || '?')+'</h3><p>'+attr.parameter.title+': '+this.formatValue(attr.value)+' ('+this.options.key+')</p><div id="barchart">barchart</div><p class="footnote">The LEP has been clipped to UKPN\'s area.</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\''+file+'\',\'scale\':true});">Save chart as PNG</a></p>';
+						return '<h3>'+(attr.properties.lep20nm || '?')+'</h3><p>'+(attr.parameter.optgroup ? attr.parameter.optgroup+' - ':'')+attr.parameter.title+': '+this.formatValue(attr.value)+' ('+this.options.key+')</p><div id="barchart">barchart</div><p class="footnote">The LEP has been clipped to UKPN\'s area.</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\''+file+'\',\'scale\':true});">Save chart as PNG</a></p>';
 					},
 					"open": function(attr){
 						var data,c,p,key,values,l,_obj;
@@ -247,7 +247,7 @@ S(document).ready(function(){
 				"popup": {
 					"text": function(attr){
 						file = 'County-'+attr.properties.cty19cd+'-'+this.options.scenario.replace(/ /,"").toLowerCase()+'-'+this.options.parameter+'.png';
-						return '<h3>'+(attr.properties.cty19nm || '?')+'</h3><p>'+attr.parameter.title+': '+this.formatValue(attr.value)+' ('+this.options.key+')</p><div id="barchart">barchart</div><p class="footnote">The area has been clipped to UKPN\'s area</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\''+file+'\',\'scale\':true});">Save chart as PNG</a></p>';
+						return '<h3>'+(attr.properties.cty19nm || '?')+'</h3><p>'+(attr.parameter.optgroup ? attr.parameter.optgroup+' - ':'')+attr.parameter.title+': '+this.formatValue(attr.value)+' ('+this.options.key+')</p><div id="barchart">barchart</div><p class="footnote">The area has been clipped to UKPN\'s area</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\''+file+'\',\'scale\':true});">Save chart as PNG</a></p>';
 					},
 					"open": function(attr){
 						var data,c,p,key,values,l,_obj;
@@ -312,7 +312,7 @@ S(document).ready(function(){
 				"popup": {
 					"text": function(attr){
 						file = 'LAD-'+attr.properties.lad20cd+'-'+this.options.scenario.replace(/ /,"").toLowerCase()+'-'+this.options.parameter+'.png';
-						return '<h3>'+(attr.properties.lad20nm || '?')+'</h3><p>'+attr.parameter.title+': '+this.formatValue(attr.value)+' ('+this.options.key+')</p><div id="barchart">barchart</div><p class="footnote">The LA may have been clipped to UKPN\'s area</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\''+file+'\',\'scale\':true});">Save chart as PNG</a></p>';
+						return '<h3>'+(attr.properties.lad20nm || '?')+'</h3><p>'+(attr.parameter.optgroup ? attr.parameter.optgroup+' - ':'')+attr.parameter.title+': '+this.formatValue(attr.value)+' ('+this.options.key+')</p><div id="barchart">barchart</div><p class="footnote">The LA may have been clipped to UKPN\'s area</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\''+file+'\',\'scale\':true});">Save chart as PNG</a></p>';
 					},
 					"open": function(attr){
 
@@ -384,7 +384,7 @@ S(document).ready(function(){
 				"popup": {
 					"text": function(attr){
 						file = 'LSOA-'+attr.properties.LSOA11CD+'-'+this.options.scenario.replace(/ /,"").toLowerCase()+'-'+this.options.parameter+'.png';
-						return '<h3>'+(attr.properties.LSOA11CD || '?')+'</h3><p>'+attr.parameter.title+': '+this.formatValue(attr.value||0)+' ('+this.options.key+')</p><div id="barchart">barchart</div><p class="footnote">The LSOAs may have been clipped to UKPN\'s area</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\''+file+'\',\'scale\':true});">Save chart as PNG</a></p>';
+						return '<h3>'+(attr.properties.LSOA11CD || '?')+'</h3><p>'+(attr.parameter.optgroup ? attr.parameter.optgroup+' - ':'')+attr.parameter.title+': '+this.formatValue(attr.value||0)+' ('+this.options.key+')</p><div id="barchart">barchart</div><p class="footnote">The LSOAs may have been clipped to UKPN\'s area</p><p class="footnote capture-hide"><a href="#" onClick="saveDOMImage(document.querySelector(\'.dfes-popup-content\'),{\'src\':\''+file+'\',\'scale\':true});">Save chart as PNG</a></p>';
 					},
 					"open": function(attr){
 

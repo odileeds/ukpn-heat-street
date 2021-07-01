@@ -73,7 +73,7 @@
 	}
 
 	FES.prototype.init = function(){
-		var html,s,l,p,css;
+		var html,s,l,p,css,g,gorder,groups;
 		if(this.options.scale=="absolute"){
 			S('#scale-holder input').attr('checked','checked');
 			S('#scale-holder').addClass('checked');
@@ -103,7 +103,25 @@
 			html = "";
 			if(!this.data.scenarios[this.options.scenario]) this.message('Scenario <em>"'+this.options.scenario+'"</em> is not defined in index.json.',{'id':'scenario','type':'ERROR'});
 			css = this.data.scenarios[this.options.scenario].css;
-			for(p in this.parameters) html += "<option"+(this.options.parameter == p ? " selected=\"selected\"":"")+" value=\""+p+"\">"+this.parameters[p].title+"</option>";
+			gorder = [];
+			groups = {};
+			for(p in this.parameters){
+				g = this.parameters[p].optgroup||"all";
+				if(!groups[g]){
+					groups[g] = [];
+					gorder.push(g);
+				}
+				groups[g].push(p);
+			}
+			for(i = 0; i < gorder.length; i++){
+				g = gorder[i];
+				if(g != "all") html += '<optgroup label="'+g+'">';
+				for(j = 0; j < groups[g].length; j++){
+					p = groups[g][j];
+					html += "<option"+(this.options.parameter == p ? " selected=\"selected\"":"")+" value=\""+p+"\">"+this.parameters[p].title+"</option>";
+				}
+				if(g != "all") html += '</optgroup>';
+			}
 			S('#parameter-holder').html('<select id="parameters">'+html+'</select><div class="about"></div>');
 			S('#parameter-holder .about').html(this.parameters[this.options.parameter].description||'').attr('class','about '+css+"-text");
 			S('#parameters').on('change',{'me':this},function(e){
