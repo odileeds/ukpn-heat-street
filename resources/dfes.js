@@ -601,7 +601,12 @@
 			this.map.on('popupopen',function(e){
 				// Call any attached functions
 				if(_obj.views[_obj.options.view].popup && _obj.views[_obj.options.view].popup.open){
-					_obj.views[_obj.options.view].popup.open.call(_obj,{'el':e.popup._contentNode,'id':e.popup._source.feature.properties[_obj.layers[_obj.views[_obj.options.view].layers[0].id].key]});
+					var l,i;
+					l = -1;
+					for(i = 0; i < _obj.views[_obj.options.view].layers.length; i++){
+						if(_obj.views[_obj.options.view].layers[i].heatmap) l = i;
+					}
+					if(l>=0) _obj.views[_obj.options.view].popup.open.call(_obj,{'el':e.popup._contentNode,'id':e.popup._source.feature.properties[_obj.layers[_obj.views[_obj.options.view].layers[l].id].key]});
 				}
 			});
 			this.map.attributionControl._attributions = {};
