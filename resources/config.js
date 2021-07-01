@@ -559,11 +559,4 @@ S(document).ready(function(){
 		}
 	});
 
-	
-/*	
-
-*/	
-	
-	
-	
 });
