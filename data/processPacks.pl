@@ -469,31 +469,31 @@ saveCSV("scenarios/LSOA/pack4-co2emissions-total-ST.csv",{'data'=>\%data,'debug'
 	{'label'=>'ST-2050-Total','rename'=>'2050','number'=>1}
 ]});
 
-saveCSV("scenarios/LSOA/pack4-co2emissions-domestic-LTW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+saveCSV("scenarios/LSOA/pack4-co2emissions-domestic-LW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
 	{'label'=>'LSOA','rename'=>'LSOA11CD'},
 	{'label'=>'2020-existing domestic','rename'=>'2020','number'=>1},
 	{'label'=>'LTW-2030-existing domestic','rename'=>'2030','number'=>1},
 	{'label'=>'LTW-2050-existing domestic','rename'=>'2050','number'=>1}
 ]});
-saveCSV("scenarios/LSOA/pack4-co2emissions-nondomestic-LTW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+saveCSV("scenarios/LSOA/pack4-co2emissions-nondomestic-LW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
 	{'label'=>'LSOA','rename'=>'LSOA11CD'},
 	{'label'=>'2020-Nondomestic','rename'=>'2020','number'=>1},
 	{'label'=>'LTW-2030-NonDomestic','rename'=>'2030','number'=>1},
 	{'label'=>'LTW-2050-NonDomestic','rename'=>'2050','number'=>1}
 ]});
-saveCSV("scenarios/LSOA/pack4-co2emissions-districtheating-LTW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+saveCSV("scenarios/LSOA/pack4-co2emissions-districtheating-LW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
 	{'label'=>'LSOA','rename'=>'LSOA11CD'},
 	{'label'=>'2020-District heating','rename'=>'2020','number'=>1},
 	{'label'=>'LTW-2030-District heating','rename'=>'2030','number'=>1},
 	{'label'=>'LTW-2050-District heating','rename'=>'2050','number'=>1}
 ]});
-saveCSV("scenarios/LSOA/pack4-co2emissions-newbuild-LTW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+saveCSV("scenarios/LSOA/pack4-co2emissions-newbuild-LW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
 	{'label'=>'LSOA','rename'=>'LSOA11CD'},
 	{'label'=>'2020-New build','rename'=>'2020','number'=>1},
 	{'label'=>'LTW-2030-New build','rename'=>'2030','number'=>1},
 	{'label'=>'LTW-2050-New build','rename'=>'2050','number'=>1}
 ]});
-saveCSV("scenarios/LSOA/pack4-co2emissions-total-LTW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
+saveCSV("scenarios/LSOA/pack4-co2emissions-total-LW.csv",{'data'=>\%data,'debug'=>1,'columns'=>[
 	{'label'=>'LSOA','rename'=>'LSOA11CD'},
 	{'label'=>'2020-Total','rename'=>'2020','number'=>1},
 	{'label'=>'LTW-2030-Total','rename'=>'2030','number'=>1},
