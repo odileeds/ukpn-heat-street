@@ -40,8 +40,7 @@ S(document).ready(function(){
 			"years": { 'min': 2020, 'max': 2050 },
 			"map": {
 				"bounds": [[50.6,-1.55],[53,2]],
-				"attribution": "Vis: <a href=\"https://odileeds.org/projects/\">ODI Leeds</a>, Data: UK Power Networks",
-				"quantised": 5
+				"attribution": "Vis: <a href=\"https://odileeds.org/projects/\">ODI Leeds</a>, Data: UK Power Networks"
 			}
 		},
 		"mapping": {
