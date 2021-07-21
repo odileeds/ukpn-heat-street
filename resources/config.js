@@ -369,7 +369,7 @@ S(document).ready(function(){
 				
 			},
 			"LSOA":{
-				"title":"LSOAs",
+				"title":"Small areas (LSOAs)",
 				"source": "lsoa",
 				"layers":[{
 					"id":"LADlayer",
