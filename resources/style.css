@@ -330,6 +330,8 @@ button:disabled { opacity: 0.8; filter: grayscale(100%); cursor: not-allowed; }
 .system-transformation { background-color: #00B0F0; color: black; }
 .leading-the-way { background-color: #92D050; color: black; }
 .about { background: #454a60; }
+.intro { background: white; color: black; }
+.intro p:last-child { margin-bottom: 0; }
 /* End of DFES styles */
 
 
