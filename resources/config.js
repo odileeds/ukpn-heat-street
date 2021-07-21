@@ -488,13 +488,13 @@ S(document).ready(function(){
 							'items': [],
 							'render': function(d){
 								// Construct the label shown in the drop down list
-								return d['name']+(d['type'] ? ' ('+d['type']+')':'');
+								return d.name+(d.layer=="LSOAlayer" ? ' ('+d.id+')' : "");
 							},
 							'rank': function(d,str){
 								// Calculate the weight to add to this airport
 								var r = 0;
 								if(d['name']) r += getScore(d['name'],str);
-								if(d['id']) r += getScore(d['name'],str);
+								if(d['id']) r += getScore(d['id'],str);
 								return r;
 							},
 							'process': function(d){
@@ -524,17 +524,16 @@ S(document).ready(function(){
 						var l,f,i,j;
 						this.search._added = {};
 						this.search.clearItems();
-						//console.log(this,this.options.view,this.layers[this.options.view]);
 						for(j = 0; j < this.views[this.options.view].layers.length; j++){
 							l = this.views[this.options.view].layers[j].id;
 							key = "";
 							if(l=="LADlayer") key = "lad20nm";
+							else if(l=="Countylayer") key = "cty19nm";
 							else if(l=="LEPlayer") key = "lep20nm";
 							else if(l=="LSOAlayer") key = "LSOA11NM";
-							if(this.layers[l].geojson && this.layers[l].geojson.features && this.layers[l].key && key){
+							if(this.layers[l].geojson && this.layers[l].geojson.features && this.layers[l].key && key && this.views[this.options.view].layers[j].heatmap){
 								// If we haven't already processed this layer we do so now
 								if(!this.search._added[l]){
-									//console.log('adding',l);
 									f = this.layers[l].geojson.features;
 									for(i = 0; i < f.length; i++) this.search.addItems({'name':f[i].properties[key]||"?",'id':f[i].properties[this.layers[l].key]||"",'i':i,'layer':l});
 									this.search._added[l] = true;

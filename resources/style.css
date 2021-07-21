@@ -264,7 +264,7 @@ button { border-radius: 6.25rem; }
 .placesearch .typeahead-results li.selected { background-color: #dfdfdf; color: black; }
 .placesearch .typeahead-results li.selected a { background-color: #444; color: white; }
 .placesearch.typing { width: 250px; }
-.placesearch.typing input[type="text"]{ display: block; min-width: 16em; height: 30px; padding: 0.25em 0.5em 0.25em 2em; border: 0px; }
+.placesearch.typing input[type="text"]{ display: block; height: 30px; padding: 0.25em 0.5em 0.25em 2em; border: 0px; }
 .placesearch.typing .typeahead-results { display: block; }
 .placesearch.typing .typeahead-results a { border: 0px; width: 100%; height: auto; text-align: left; }
 .placesearch.typing .pop-left { display: inline-block; position: absolute!important; top: 0px; right: 0px; width: 100%; }
