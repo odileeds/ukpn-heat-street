@@ -449,11 +449,34 @@ S(document).ready(function(){
 				if(el){
 					// Does the place search exist?
 					if(!el.querySelector('.placesearch')){
+
+						_obj = this;
+
 						div = document.createElement('div');
-						div.classList.add('leaflet-control');
-						div.classList.add('leaflet-bar');
-						div.innerHTML = '<div class="placesearch"><button class="submit" href="#" title="Search" role="button" aria-label="Search"></button><form class="placeform layersearch pop-left" action="search" method="GET" autocomplete="off"><input class="place" id="search" name="place" value="" placeholder="Search for a named area" type="text" /><div class="searchresults" id="searchresults"></div></div></form>';
+						div.classList.add('leaflet-control','leaflet-bar');
+						div.innerHTML = '<div class="placesearch leaflet-button"><button class="submit" href="#" title="Search" role="button" aria-label="Search"></button><form class="placeform layersearch pop-left" action="search" method="GET" autocomplete="off"><input class="place" id="search" name="place" value="" placeholder="Search for a named area" type="text" /><div class="searchresults" id="searchresults"></div></div></form></div>';
 						el.appendChild(div);
+						
+						if("geolocation" in navigator){
+							div2 = document.createElement('div');
+							div2.classList.add('leaflet-control','leaflet-bar');
+							div2.innerHTML = '<div class="geolocate leaflet-button"><button id="geolocate" role="button" title="Centre map on my location" aria-label="Centre map on my location"></button></div>';
+							el.appendChild(div2);
+							S(div2).on('click',{},function(e){
+								var btn = e.currentTarget;
+								btn.classList.add('searching');
+								navigator.geolocation.getCurrentPosition(function(position){
+									_obj.map.panTo({lat: position.coords.latitude, lng: position.coords.longitude});
+									btn.classList.remove('searching');
+								},function(error){
+									_obj.log('ERROR','Sorry, no position available.',`ERROR(${error.code}): ${error.message}`);
+								},{
+									enableHighAccuracy: true, 
+									maximumAge        : 2000, 
+									timeout           : 10000
+								});
+							});
+						}
 						
 						function toggleActive(state){
 							e = el.querySelector('.placesearch');
@@ -467,8 +490,6 @@ S(document).ready(function(){
 						}
 					
 						div.querySelector('.submit').addEventListener('click', function(e){ toggleActive(); });
-
-						_obj = this;
 						
 						// Stop map dragging on the element
 						el.addEventListener('mousedown', function(){ _obj.map.dragging.disable(); });

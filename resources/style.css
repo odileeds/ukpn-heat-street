@@ -241,22 +241,39 @@ button { border-radius: 6.25rem; }
 .capture #scale .max { padding-right: 0;  }
 
 /* Typeahead search */
-.placesearch { min-width: 30px; min-height: 30px; }
-.placesearch .submit {
-	background-image: url(search.svg);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: 50% 50%;
+.leaflet-button { min-width: 30px; min-height: 30px; background-color: white; }
+.leaflet-button button {
 	width: 30px;
 	height: 30px;
 	border-radius: 2px;
-	background-color: white;
 	z-index: 2;
 	display: block;
 	cursor: pointer;
 	position: relative;
+	padding:0;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 60% 60%;
+	background-color: transparent;
 }
-.placesearch .submit:hover, .placesearch .submit:focus { background-color: #f4f4f4!important; }
+.leaflet-button button:hover, .leaflet-button button:focus { background-color: #f4f4f4!important; }
+.geolocate button {
+	background-image: url(geolocate.svg);
+}
+.searching {
+	animation: myanim 2s infinite;
+}
+@keyframes myanim {
+	20% {
+		border-color: red;
+	}
+	40% {
+		border-color: red;
+	}
+}
+.placesearch .submit {
+	background-image: url(search.svg);
+}
 .placesearch form { position: relative; }
 .placesearch .pop-left { display: none; }
 .placesearch .typeahead-results { width: 100% }
