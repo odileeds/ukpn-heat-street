@@ -515,9 +515,9 @@ S(document).ready(function(){
 								// Calculate the weight to add to this airport
 								var r = 0;
 								if(postcodes[postcode] && postcodes[postcode].data){
+									_obj.log(d,d.id,postcodes[postcode].data.attributes.lep1);
 									for(var cd in postcodes[postcode].data.attributes){
 										if(postcodes[postcode].data.attributes[cd]==d.id){
-											console.log('rank',d,postcode,postcodes[postcode].data.attributes,cd,d.id);
 											r += 1;
 										}
 									}
@@ -555,7 +555,7 @@ S(document).ready(function(){
 							var v = e.target.value.replace(/ /g,"");
 							var m = v.match(regex)||[];
 							if(m.length){
-								console.log('Looks like a postcode',m[0]);
+								_obj.log('INFO','Looks like a postcode',m[0]);
 								postcode = m[0];
 								if(!postcodes[m[0]]){
 									postcodes[m[0]] = {};
