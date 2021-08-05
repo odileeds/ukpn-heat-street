@@ -1,10 +1,10 @@
 /*!
-	Typeahead search v0.1.5
+	Typeahead search v0.1.6
 */
 (function(root){
 
 	function Builder(){
-		this.version = "0.1.5";
+		this.version = "0.1.6";
 		this.init = function(el,opt){ return new TA(el,opt); };
 		return this;
 	}
@@ -132,7 +132,12 @@
 			if(sel >= 0) li[sel].classList.remove('selected');
 			li[s].classList.add('selected');
 		}
-
+		this.update = function(){
+			var ev = document.createEvent('HTMLEvents');
+			ev.initEvent('keyup', false, true);
+			el.dispatchEvent(ev);
+			return this;
+		}
 		this.on = function(event,data,fn){
 			if(!el){
 				console.warn('Unable to attach event '+event);

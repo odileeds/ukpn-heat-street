@@ -514,6 +514,15 @@ S(document).ready(function(){
 							'rank': function(d,str){
 								// Calculate the weight to add to this airport
 								var r = 0;
+								if(postcodes[postcode] && postcodes[postcode].data){
+									for(var cd in postcodes[postcode].data.attributes){
+										if(postcodes[postcode].data.attributes[cd]==d.id){
+											console.log('rank',d,postcode,postcodes[postcode].data.attributes,cd,d.id);
+											r += 1;
+										}
+									}
+									
+								}
 								if(d['name']) r += getScore(d['name'],str);
 								if(d['id']) r += getScore(d['id'],str);
 								return r;
@@ -538,6 +547,29 @@ S(document).ready(function(){
 									}
 								}
 							}
+						});
+						var postcode = "";
+						var postcodes = {};
+						var regex = new RegExp(/^([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([AZa-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9]?[A-Za-z]))))[0-9][A-Za-z]{2})$/);
+						this.search.on('change',{'me':this.search},function(e){
+							var v = e.target.value.replace(/ /g,"");
+							var m = v.match(regex)||[];
+							if(m.length){
+								console.log('Looks like a postcode',m[0]);
+								postcode = m[0];
+								if(!postcodes[m[0]]){
+									postcodes[m[0]] = {};
+									S().ajax('https://findthatpostcode.uk/postcodes/'+m[0]+'.json',{
+										'dataType':'json',
+										'postcode':m[0],
+										'this': e.data.me,
+										'success': function(data,attr){
+											postcodes[attr.postcode] = data;
+											this.update();
+										}
+									});
+								}
+							}else postcode = "";
 						});
 
 					}
