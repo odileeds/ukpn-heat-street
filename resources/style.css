@@ -65,6 +65,7 @@ table {
 ol { list-style: decimal; margin-left: 1em; }
 ol li { margin-bottom: 1em; }
 ol li:last-child { margin-bottom: 0px; }
+html { scroll-behavior: smooth; }
 body {
 	background-color: #000000;
 	font-family: "source-sans-pro", "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
